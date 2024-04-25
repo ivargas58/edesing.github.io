@@ -165,3 +165,38 @@ html{
     background-color: #34846c;
     padding: 40px;
 }
+/* Ajustes para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .card-container {
+      flex-direction: column; /* Cambiar a disposición de columna para dispositivos móviles */
+      align-items: center; /* Centrar tarjetas en dispositivos móviles */
+    }
+  
+    .card {
+      width: 90%; /* Ancho más estrecho para dispositivos móviles */
+      margin: 20px 0; /* Espaciado entre tarjetas en dispositivos móviles */
+    }
+  
+    #informacion {
+      flex-direction: column; /* Cambiar a disposición de columna para dispositivos móviles */
+      align-items: center; /* Centrar elementos en dispositivos móviles */
+    }
+  
+    #informacion img {
+      max-width: 90%; /* Ancho máximo para imágenes en dispositivos móviles */
+      margin: 20px 0; /* Espaciado entre imágenes en dispositivos móviles */
+    }
+  }
+  
+  /* Ajustes para dispositivos con ancho de pantalla aún más pequeño, como smartphones en modo retrato */
+  @media screen and (max-width: 480px) {
+    .card {
+      width: 100%; /* Ancho completo para tarjetas en dispositivos móviles con pantalla muy pequeña */
+    }
+  
+    #informacion img {
+      max-width: 100%; /* Ancho completo para imágenes en dispositivos móviles con pantalla muy pequeña */
+    }
+  }
+  
+  
