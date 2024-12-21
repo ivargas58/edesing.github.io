@@ -4,94 +4,245 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edesing</title>
-    <link rel="stylesheet" href="style.css">
-    
+    <!-- Favicon -->
+    <link rel="icon" href="img/Logo.png" type="image/png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+          /* Additional styles */
+          head > link[rel="icon"] {
+            border-radius: 50%;
+        }
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #F7E9DC;
+            color: #4A5568;
+        }
+        a {
+            text-decoration: none;
+        }
+
+        /* Header */
+        header {
+            background-color: #9CD0E2;
+            color: #4A5568;
+            padding: 20px 0; /* Reduced padding for more compact header */
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem; /* Reduced font size */
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1rem; /* Reduced font size */
+        }
+
+        .btn-primary {
+            background-color: #135E73;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #135E73;
+            opacity: 0.8;
+        }
+
+        /* Objectives Section */
+        #objectives {
+            padding: 30px 0; /* Reduced padding for more compact objectives section */
+            background-color: #ffffff;
+        }
+
+        #objectives .card {
+            height: 350px; /* Adjusted card height for better visual balance */
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        #objectives .card:hover {
+            transform: scale(1.03);
+        }
+
+        /* Fixing image size and making it responsive */
+        #objectives img {
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            object-fit: contain; /* Ensures full image visibility without cropping */
+            width: 100%;
+            height: 180px; /* Maintaining a reasonable image height */
+        }
+
+        /* Info Section */
+        #info {
+            background-color: #9CD0E2;
+            color: #4A5568;
+            padding: 30px 0; /* Reduced padding for more compact info section */
+        }
+
+        #info img {
+            width: 70px;
+            height: 70px;
+            border-radius: 12px;
+        }
+
+        /* Contact Section */
+        #contact {
+            padding: 40px 0; /* Reduced padding for more compact contact section */
+        }
+
+        #contact form .form-control {
+            border-radius: 8px;
+        }
+
+        #contact form button {
+            background-color: #135E73;
+            border: none;
+            color: white;
+        }
+
+        #contact form button:hover {
+            opacity: 0.8;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #4A5568;
+            color: #F7E9DC;
+            padding: 20px 0; /* Reduced padding for more compact footer */
+            text-align: center;
+        }
+
+        /* Social Icons */
+        .social-icons {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            margin: 0 12px;
+            font-size: 1.8rem; /* Adjusted icon size */
+            color: #F7E9DC;
+        }
+
+        /* Animations */
+        .fade-in {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .slide-in {
+            animation: slideIn 1.5s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header class="menu">
-        <div class="container">
-            <nav class="menubar">
-                <a href="https://galeriapython-production.up.railway.app/">Galeria Virtual</a>
-                <a href="#presentacion">Presentacion </a>
-                <a href="#objetivos">Objetivos </a>
-                <a href="#informacion">Informacion </a> 
-            </nav>
-        </div>
+    <!-- Header -->
+    <header class="fade-in">
+        <h1>Edesing</h1>
+        <p>El arte, al alcance de todos, inspira y conecta al mundo</p>
+        <a href="https://galeriapython-production.up.railway.app/" class="btn btn-primary btn-lg mt-4">Galeria Virtual</a>
+        <a href="#" class="btn btn-primary btn-lg mt-4">Shopify</a>
     </header>
 
-    <section id="galeria">
-        <h1 id="titulo">GALERIA</h1>
-        <div class="slider">
-            <div class="slides">
-                <div class="slide"><img src="elefante.png" alt="Imagen 1"></div>
-                <div class="slide"><img src="pintura violeta.png" alt="Imagen 2"></div>
-                <div class="slide"><img src="Eespalda.png" alt="Imagen 3"></div>
-            </div>
-            <button class="btn-prev">&#10094;</button>
-            <button class="btn-next">&#10095;</button>
-        </div>
-    </section>
-    <section id="objetivos">
-        <h1 id="titulo">OBJETIVOS</h1>
-        <div class="card-container">
-            
-            <div class="card">
-                <div class="front">
-                    <img src="Expandir.png" alt="Expandir" height="auto" width="300px">
-                </div>
-                <div class="back">
-                    <h1>Expandir</h1>
-                    <p>Como todo negocio hoy dia tiene sus etapas segun su expacion de capital. Tenemos tener en cuenta que esta es la base del negocio, pero mezclando la ingenieria industrial con el arte se pueden lograr muchas mas cosas de lo que podemos pensar. Esto sera una gran oportunidad para las personas profesionales y no profesionales de las diferentes areas de un negocio. Asi logrando la mayor capacidad de empleos posibles para los ciudadanos de Puerto Rico y otras partes del mundo. Para si expandir mas alla de la isla de Puerto Rico y emplear para los diferentes departamento.</p>
+    <!-- Objectives Section -->
+    <section id="objectives" class="container">
+        <h2 class="text-center mb-5 slide-in">Objetivos</h2>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="card">
+                    <img src="/img/avatar.png" class="card-img-top" alt="Expand">
+                    <div class="card-body">
+                        <h5 class="card-title">Expandir</h5>
+                        <p class="card-text">Como negocio realzar el talento boricua.</p>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="front">
-                    <img src="Implementar.png" alt="Implementar" height="auto" width="300px">
-                </div>
-                <div class="back">
-                    <h1>Implementar</h1>
-                    <p>El arte es uno de los muchos negocios que pueden ser costoso no solo en materiales sino en venta ya que una venta puede valer mucho dinero. Pero Ernesto quiere impactar todo el publico posible asi que implementara el arte en los diferentes objetos tangibles como: gorras, camisas, tazas entre otros. No solo contento con eso crear arte para nuestro clientes de alto valor de clase media alta y alta. Ya que cuenta con el talento para crear arte de alto valor. En fin uno de los objetivos para este proyecto es lograr crear una marca que impacte a todo el publico en general lograr traer el arte a todo el que lo desee y cuente con un presupuesto inicial. </p>
+            <div class="col-lg-4 col-md-6">
+                <div class="card">
+                    <img src="/img/networking.png" class="card-img-top" alt="Innovate">
+                    <div class="card-body">
+                        <h5 class="card-title">Innovar</h5>
+                        <p class="card-text">Crear nuevas formas de impartir el arte.</p>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="front">
-                    <img src="Networking.png" alt="Networking" height="auto" width="300px">
-                </div>
-                <div class="back">
-                    <h1>Networking</h1>
-                    <p>El networking en el ámbito del arte emerge como un componente esencial para el crecimiento y la proyección exitosa de los profesionales en este sector. La interconexión entre artistas, galeristas y demás actores del medio no solo facilita la difusión de obras, sino que también propicia un intercambio invaluable de ideas y perspectivas. La creación de una red sólida no solo amplía las oportunidades de colaboración, sino que también brinda acceso a recursos, mentorías y eventos relevantes. En un mundo cada vez más interconectado, la construcción de relaciones significativas en el negocio del arte no solo fortalece la visibilidad de los creadores, sino que también contribuye al enriquecimiento mutuo de conocimientos y experiencias. La habilidad para establecer y nutrir conexiones efectivas puede resultar determinante para el éxito a largo plazo en un mercado artístico dinámico y competitivo.</p>
+            <div class="col-lg-4 col-md-6">
+                <div class="card">
+                    <img src="/img/ambientacion.png" class="card-img-top" alt="Connect">
+                    <div class="card-body">
+                        <h5 class="card-title">Ambientación</h5>
+                        <p class="card-text">Enseñar a los jóvenes que el arte también es una herramienta para personalizar y ambientar su espacio de acuerdo con sus gustos y colores.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <br>
-    <br>
-    <h1 id="titulo">INFORMACION</h1>
-    <section id="informacion">
-        
-        <div><img src="Logo.png" alt=""></div>
-        <div><a href="https://www.instagram.com/ernests_designs/"><img src="QR.png" alt=""></a></div>
-        <div id="donaciones">
-            <h2>Donaciones</h2>
-            <div>
-                <label for="Numero"> Numero:</label>
-                <input type="number">
+
+    <!-- Contact Section -->
+    <section id="contact" class="container">
+        <h2 class="text-center mb-5 slide-in">Formulario de Contacto</h2>
+        <form class="row g-3">
+            <div class="col-md-6">
+                <label for="name" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="name" placeholder="Tu nombre">
             </div>
-            <div>
-                <label for="email">Email:</label>
-                <input type="email">
+            <div class="col-md-6">
+                <label for="email" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="email" placeholder="Tu correo electrónico">
             </div>
-            
-        </div>
+            <div class="col-md-6">
+                <label for="phone" class="form-label">Número de Teléfono</label>
+                <input type="tel" class="form-control" id="phone" placeholder="Tu número de teléfono">
+            </div>
+            <div class="col-12">
+                <label for="message" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="message" rows="5" placeholder="Escribe tu mensaje"></textarea>
+            </div>
+            <div class="col-12 text-center">
+                <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+            </div>
+        </form>
     </section>
-   
-        
+
+    <!-- Footer -->
     <footer>
-        <div class="footer">
-            <p> &copy; Ernest Design 2024</p>
+        <p>&copy; 2024 Edesing. All rights reserved.</p>
+        <!-- Social Icons -->
+        <div class="social-icons">
+            <a href="https://www.instagram.com/ernests_designs/" target="_blank"><i class="bi bi-instagram"></i> Instagram</a>
+            <a href="https://www.tiktok.com/@ernestsdesigns?_t=8sPOMOw9QWg&_r=1" target="_blank"><i class="bi bi-tiktok"></i> TikTok</a>
+            <a href="#" target="_blank"><i class="bi bi-linkedin"></i> LinkedIn</a>
         </div>
     </footer>
-    
-    <script src="scripts.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Icons (for social media icons) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </body>
 </html>
